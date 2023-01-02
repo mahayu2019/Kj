@@ -22,22 +22,39 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="按钮Button"
-                android:textAllCaps="false"
-        />
+                android:textAllCaps="false"/>
         <EditText
                 android:id="@+id/editText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="这是提示文本:在此输入文字"
-                android:maxLines="1"
-        />
+                android:maxLines="1"/>
         <ImageView
                 android:id="@+id/imgs"
                 android:layout_width="100dp"
                 android:layout_height="150dp"
                 android:src="@drawable/h2"/>
+        <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:max="100"/>
+        <Button
+                android:id="@+id/btnAlert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="警告对话框"
+                />
+        <Button
+                android:id="@+id/btnprogress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="带进度条的对话框"
+                />
 
 
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
