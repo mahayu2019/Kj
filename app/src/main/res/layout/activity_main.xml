@@ -44,15 +44,17 @@
                 android:id="@+id/btnAlert"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="警告对话框"
-                />
+                android:text="警告对话框"/>
         <Button
                 android:id="@+id/btnprogress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="带进度条的对话框"
-                />
+                android:text="带进度条的对话框"/>
 
+        <ListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
 
     </LinearLayout>
 

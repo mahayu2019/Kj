@@ -10,12 +10,18 @@ import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "按钮";
     private String imgid;
     private ProgressBar pb;
     private Button btnAlert;
     private Button btnprogress;
+    private String[] data = {"apple", "banana", "orange", "water",
+            "fire"};
+    private List<Fruit> fruitList = new ArrayList<>();
 
 
     @Override
@@ -94,6 +100,30 @@ public class MainActivity extends AppCompatActivity {
 //
 //            }
 //        });
+//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+//                MainActivity.this, android.R.layout.simple_list_item_1, data
+//        );
+        initFruits();//初始化list数据
+        FruitAdapter adapter = new FruitAdapter(MainActivity.this, R.layout.fruit_item, fruitList);
+        ListView listView = (ListView) findViewById(R.id.listview);
+        listView.setAdapter(adapter);
+
+
+    }
+
+    private void initFruits() {
+        for (int i = 0; i < 2; i++) {
+            Fruit apple = new Fruit("Apple", R.drawable.ls01);
+            fruitList.add(apple);
+            Fruit banana = new Fruit("banana", R.drawable.ls02);
+            fruitList.add(banana);
+            Fruit orange = new Fruit("orange", R.drawable.ls03);
+            fruitList.add(orange);
+            Fruit water = new Fruit("water", R.drawable.ls04);
+            fruitList.add(water);
+            Fruit fire = new Fruit("fire", R.drawable.ls05);
+            fruitList.add(fire);
+        }
 
     }
 }
